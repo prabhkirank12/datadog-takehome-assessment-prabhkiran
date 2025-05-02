@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Take Home</title>
+        <script src="https://cdn.tailwindcss.com"></script> 
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="m-8 flex justify-between">
+            <h1 class="text-2xl font-semibold">Featured Resources</h1>
+            <!-- Wrapper around the button for relative positioning -->
+            <div class="relative">
+                <button id="filter-button" class="px-8 py-2 bg-red-500 text-white rounded-md hover:bg-red-700">Filter</button>
+                <!-- Dropdown Menu for Categories (Initially Hidden) -->
+                <div id="filter-menu" class="hidden absolute bg-white border border-gray-300 rounded-md shadow-lg z-10 mt-2 w-full">
+                    <!-- Categories will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+        <div class="container p-2 mx-auto">
+            <div class="card-wrapper grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+        </div>
+    </body>
+</html>
+
+<!--
+Performance and Considerations:
+1. To make sure the filtering logic and component load quickly and perform efficiently, I preload 
+all the resource data once during the initial fetch and store it in memory(allData). This avoids refetching
+when filters are applied, reducing network overhaed and improving performance. 
+For scalability, if the dataset is large we could:
+    1. Use pagination or lazy loading to load only a subset of data at a time.
+    2. Implement a more sophisticated caching strategy to store previously fetched data.
+
+Design & Inegration:
+I built this component to keep things clean and simple. The structure follows a clear separation of concerns and 
+Tailwind makes it easy to keep everything responsive and consistent. All the logic-like fetching data, filtering and rendering is handled
+with plain JavaScript, so it's lightweight and doesn't rely on any frameworks. That means it's easy to plug into different setups.
+
+If this were part of a larger site, it could easily slot into a CMS or be intergrated with a front-end framework. To keep things scalable,
+the datac could  come from an API, an the logic could be refactored nto reusable pieces or moved to something like React/Astro.
+
+-->

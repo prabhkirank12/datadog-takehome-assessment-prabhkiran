@@ -23,5 +23,11 @@
       "description": "Learn how you can gain actionable visibility into your Amazon S3 and Google Cloud Storage usage, performance, and costs.",
       "category": "Blog",
       "url": "https://www.datadoghq.com/blog/datadog-storage-monitoring/"
+    },
+    {
+      "title": "Optimize & troubleshoot cloud storage at scale with Storage Monitoring",
+      "description": "Learn how you can gain actionable visibility into your Amazon S3 and Google Cloud Storage usage, performance, and costs.",
+      "category": "Blog Post",
+      "url": "https://www.datadoghq.com/blog/datadog-storage-monitoring/"
     }
 ]
