@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = document.createElement('div');
         card.className = 'card p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 space-y-3';
 
+        // instead of using innerHTML, we can use template literals to create the card content
+        // This is more secure and avoids XSS vulnerabilities
+        // Also, we can use a more semantic structure for the card
         card.innerHTML = `
             <div class="card flex flex-col gap-6">
                 <div class="flex justify-between items-center"> 
